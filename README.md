@@ -1,5 +1,15 @@
 # vue_crash_todolist
 
+A simple TodoList app.
+
+Created following a [Vue Crash Course](https://youtu.be/Wy9q22isx3U)
+
+![](/home/teo/Documents/SideProjects/Vue/vueCrashCourse/images/screen1.png)
+
+![](/home/teo/Documents/SideProjects/Vue/vueCrashCourse/images/screen2.png)
+
+
+
 ## Project setup
 ```
 npm install
