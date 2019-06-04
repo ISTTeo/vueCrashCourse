@@ -1,50 +1,17 @@
 <template>
   <div id="app">
     <Header />
-    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
-    <AddTodo v-on:add-todo="addTodo"/>
+
+    <router-view/>
   </div>
 </template>
-
 <script>
-import Header from './components/layouts/Header';
-import Todos from './components/Todos';
-import AddTodo from './components/AddTodo';
-import axios from 'axios';
+import Header from './components/layouts/Header'
+
 export default {
-  name: 'app',
+  name:"app",
   components: {
-    Header,
-    Todos,
-    AddTodo
-  },
-  data() {
-    return {
-      todos: []
-    }
-  },
-  methods: {
-    deleteTodo(id) {
-      axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
-        .then(res => this.todos = this.todos.filter(todo => todo.id !== id)) 
-        .catch(err => console.log(err));
-      
-    },
-    addTodo(newTodo) {
-      const {title, completed } = newTodo; 
-      axios.post('https://jsonplaceholder.typicode.com/todos', {
-        title,
-        completed
-      })
-        .then(res => this.todos = [...this.todos, newTodo]) //gives back todo but with the id
-        .catch(err => console.log(err));
-      
-    }
-  },
-  created() {
-    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
-      .then(res => this.todos = res.data)
-      .catch(err => console.log(err));
+    Header
   }
 }
 </script>
