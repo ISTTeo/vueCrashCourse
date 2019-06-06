@@ -1,11 +1,11 @@
 <template>
-    <div class="todo-item" v-bind:class="{'is-complete':todo.completed}">
-        <p>
-            <input type="checkbox" v-on:change="markComplete">
-            {{todo.title}}
-            <button v-on:click="$emit('del-todo', todo.id)" class="del">x</button>
-        </p>
-    </div>
+    <a class="todo-item" v-bind:class="{'is-complete':todo.completed}">
+        
+<!--             <input type="checkbox" v-on:change="markComplete">
+ -->            {{todo.title.substring(0,2)+".."}}
+<!--             <button v-on:click="$emit('del-todo', todo.id)" class="del">x</button>
+ -->        
+    </a>
 </template>
 
 <script>
