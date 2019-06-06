@@ -1,7 +1,7 @@
 <template>
     <div>
         
-        <div v-for="row in Math.ceil(todos.length / 5)">
+        <div class="row" v-for="row in Math.ceil(todos.length / 5)">
             <a v-bind:key="todo.id" v-for="todo in todos.slice((row - 1) * 5, row * 5)">
                 <TodoItem v-bind:todo="todo" v-on:del-todo="$emit('del-todo', todo.id)"/>
             </a>
