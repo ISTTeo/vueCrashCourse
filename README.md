@@ -8,6 +8,10 @@ Created following a [Vue Crash Course](https://youtu.be/Wy9q22isx3U)
 
 ![](/images/screen2.png)
 
+## After adding Bootstrap
+
+![](/images/screen3.png)
+
 
 
 ## Project setup
