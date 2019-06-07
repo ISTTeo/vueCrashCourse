@@ -45,6 +45,8 @@ export default {
 
     input[type="submit"] {
         flex:2;
+        color:white;
+        background:#555;
     }
 
 
